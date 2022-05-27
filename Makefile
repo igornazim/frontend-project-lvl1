@@ -1,17 +1,17 @@
 install:
-	 npm install
+	npm install
 
 install-deps:
-        npm ci
+	npm ci
 
 brain-games:
-        node bin/brain-games.js
+	node bin/brain-games.js
 
 lint:
 	npx eslint .
 
 test:
-	 npm test
+	npm test
 
 publish:
-        npm publish
+	npm publish
