@@ -6,4 +6,4 @@ href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><i
 src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" 
 /></a>
 
-![linter status](https://github.com/<igornazim>/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)
+![Build Status](https://github.com/igornazim/frontend-project-lvl1/workflows/push/badge.svg)](https://github.com/igornazim/frontend-project-lvl1/actions/workflows/nodejs.yml)

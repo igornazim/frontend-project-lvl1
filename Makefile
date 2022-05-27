@@ -1,11 +1,17 @@
-install: # установить зависимости
-	npm ci install
+install:
+	 npm install
+
+install-deps:
+        npm ci
 
 brain-games:
-	node bin/brain-games.js
+        node bin/brain-games.js
 
-publish: 
-	npm publish --dry-run
-
-make lint:
+lint:
 	npx eslint .
+
+test:
+	 npm test
+
+publish:
+        npm publish
