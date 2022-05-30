@@ -11,13 +11,14 @@ const isEvenGame = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  while (i <= rounds) {
+  while (let i <= rounds) {
     const expectedAnswer = isEven(value) ? 'yes' : 'no';
     const userUnswer = readlineSync.question(value);
     if (userUnswer === expectedAnswer) {
       console.log('Correct!');
       i += 1;
     } else console.log('Wrong answer!')
+    console.log('Epic fail');
     return;
   }
   console.log(`Congratulations, ${userName}`);
