@@ -12,8 +12,8 @@ const isEvenGame = () => {
   const userUnswer = readlineSync.question(value);
   if (userUnswer === isEven(value)) {
     console.log('Correct!')
-    else console.log("Wrong answer!")
   }
+  else console.log("Wrong answer!")
 };
 
 export default isEvenGame;
