@@ -16,7 +16,8 @@ const isEvenGame = () => {
     const userAnswer = readlineSync.question(value);
     if (userAnswer !== expectedAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${expectedAnswer}.`);
-      return console.log(`Let's try again, ${userName}!`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
     }
     console.log(`Your answer: ${userAnswer}`);
     console.log('Correct!');
@@ -24,6 +25,9 @@ const isEvenGame = () => {
   };
   let i = 0;
   while (i < rounds) {
+    if (userAnswer !== expectedAnswer) {
+      return;
+    }
    getAnswer();
   }
   console.log(`Congratulations, ${userName}`);
