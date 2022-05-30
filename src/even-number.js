@@ -21,15 +21,10 @@ const isEvenGame = () => {
     }
     console.log(`Your answer: ${userAnswer}`);
     console.log('Correct!');
-    i += 1;
   };
-  let i = 0;
-  while (i < rounds) {
-    if (userAnswer !== expectedAnswer) {
-      return;
-    }
-   getAnswer();
-  }
+  for (let i = 0; i < rounds; i += 1) {
+    getAnswer();
+  };
   console.log(`Congratulations, ${userName}`);
 };
 
