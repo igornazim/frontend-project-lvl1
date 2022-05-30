@@ -13,11 +13,13 @@ const isEvenGame = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   const getAnswer = () => {
     const expectedAnswer = isEven(value) ? 'yes' : 'no';
-    const userUnswer = readlineSync.question(value);
+    const userAnswer = readlineSync.question(value);
     if (userUnswer === expectedAnswer) {
+      console.log(`Your answer: ${userUnswer}`);
       console.log('Correct!');
       i += 1;
-    } else console.log('Wrong answer!')
+    } else console.log('Wrong answer!');
+    console.log(`'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${userName}!`);
   };
   let i = 0;
   while (i < rounds) {
