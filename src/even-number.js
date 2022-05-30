@@ -16,3 +16,5 @@ const isEvenGame = () => {
     else console.log("Wrong answer!")
   }
 };
+
+export default isEvenGame;
