@@ -14,8 +14,8 @@ const isEvenGame = () => {
   const getAnswer = () => {
     const expectedAnswer = isEven(value) ? 'yes' : 'no';
     const userAnswer = readlineSync.question(value);
-    if (userUnswer === expectedAnswer) {
-      console.log(`Your answer: ${userUnswer}`);
+    if (userAnswer === expectedAnswer) {
+      console.log(`Your answer: ${userAnswer}`);
       console.log('Correct!');
       i += 1;
     } else console.log('Wrong answer!');
