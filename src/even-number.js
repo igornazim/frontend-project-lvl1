@@ -19,7 +19,7 @@ const isEvenGame = () => {
       console.log('Correct!');
       i += 1;
     } else console.log('Wrong answer!');
-    console.log(`'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${userName}!`);
+    console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${expectedAnswer}. Let's try again, ${userName}!`);
   };
   let i = 0;
   while (i < rounds) {
