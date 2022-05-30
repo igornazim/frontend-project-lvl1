@@ -16,8 +16,7 @@ const isEvenGame = () => {
     const userAnswer = readlineSync.question(value);
     if (userAnswer !== expectedAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${expectedAnswer}.`);
-      console.log(`Let's try again, ${userName}!`);
-      return;
+      return console.log(`Let's try again, ${userName}!`);
     }
     console.log(`Your answer: ${userAnswer}`);
     console.log('Correct!');
