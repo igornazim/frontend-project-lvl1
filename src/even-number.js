@@ -20,7 +20,7 @@ const isEvenGame = () => {
     } else console.log('Wrong answer!')
   };
   let i = 0;
-  while (i <= rounds) {
+  while (i < rounds) {
    getAnswer();
   }
   console.log(`Congratulations, ${userName}`);
