@@ -8,3 +8,4 @@ src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability"
 
 [![Node CI](https://github.com/igornazim/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)](https://github.com/igornazim/frontend-project-lvl1/actions/workflows/nodejs.yml)
 
+https://asciinema.org/a/lsjz3K73KgZvIH6CVlTPYVCQf
