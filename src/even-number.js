@@ -9,7 +9,7 @@ const isEvenGame = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const getAnswer = () => {
+  for (let i = 0; i < rounds; i += 1) {
     const random = new Random();
     const value = random.integer(1, 100);
     const expectedAnswer = isEven(value) ? 'yes' : 'no';
@@ -21,9 +21,6 @@ const isEvenGame = () => {
     }
     console.log(`Your answer: ${userAnswer}`);
     console.log('Correct!');
-  };
-  for (let i = 0; i < rounds; i += 1) {
-    getAnswer();
   };
   console.log(`Congratulations, ${userName}`);
 };
