@@ -12,14 +12,14 @@ const isEvenGame = () => {
   for (let i = 0; i < rounds; i += 1) {
     const random = new Random();
     const value = random.integer(1, 100);
+    console.log(`${value}`);
     const expectedAnswer = isEven(value) ? 'yes' : 'no';
-    const userAnswer = readlineSync.question(value);
+    const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== expectedAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${expectedAnswer}.`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
-    console.log(`Your answer: ${userAnswer}`);
     console.log('Correct!');
   }
   console.log(`Congratulations, ${userName}`);
