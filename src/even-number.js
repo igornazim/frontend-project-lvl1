@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import { Random } from "random-js";
+import { Random } from 'random-js';
 
-const isEven = number => number % 2 === 0;
+const isEven = (number) => number % 2 === 0;
 const rounds = 3;
 
 const isEvenGame = () => {
@@ -21,7 +21,7 @@ const isEvenGame = () => {
     }
     console.log(`Your answer: ${userAnswer}`);
     console.log('Correct!');
-  };
+  }
   console.log(`Congratulations, ${userName}`);
 };
 
