@@ -2,8 +2,8 @@ import readlineSync from 'readline-sync';
 import { Random } from 'random-js';
 
 const summ = (number1, number2) => number1 + number2;
-const subtraction = (number1, number2) => number1 - number2;
-const multiplication = (number1, number2) => number1 * number2;
+const subtr = (number1, number2) => number1 - number2;
+const multiply = (number1, number2) => number1 * number2;
 const rounds = 3;
 
 const calcGame = () => {
