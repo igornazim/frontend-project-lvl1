@@ -18,7 +18,7 @@ const calcGame = () => {
     console.log(`${value1} + ${value2}`);
     const expectedAnswer = summ(value1, value2);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer !== expectedAnswer) {
+    if (Number(userAnswer) !== expectedAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${expectedAnswer}.`);
       console.log(`Let's try again, ${userName}!`);
       return;
