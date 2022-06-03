@@ -4,6 +4,7 @@ import { Random } from 'random-js';
 const summ = (number1, number2) => number1 + number2;
 const subtr = (number1, number2) => number1 - number2;
 const multiply = (number1, number2) => number1 * number2;
+const simbols = ['+', '-', '*'];
 const rounds = 3;
 
 const calcGame = () => {
@@ -15,8 +16,9 @@ const calcGame = () => {
     const random = new Random();
     const value1 = random.integer(1, 100);
     const value2 = random.integer(1, 100);
-    console.log(`${value1} + ${value2}`);
-    const expectedAnswer = summ(value1, value2);
+    const simbol = random.pick(simbols);
+    console.log(`${value1}${simbol}${value2}`);
+    const expectedAnswer = (simbol === '+') ? summ(value1, value2) : (simbol === '-') ? subtr(value1, value2) : multiply(value1, value2);
     const userAnswer = readlineSync.question('Your answer: ');
     if (Number(userAnswer) !== expectedAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${expectedAnswer}.`);
