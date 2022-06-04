@@ -18,7 +18,15 @@ const calcGame = () => {
     const value2 = random.integer(1, 100);
     const simbol = random.pick(simbols);
     console.log(`${value1}${simbol}${value2}`);
-    const expectedAnswer = (simbol === '+') ? summ(value1, value2) : (simbol === '-') ? subtr(value1, value2) : multiply(value1, value2);
+    const check = (operator) => {
+      if (operator === '+') {
+        return summ(value1, value2);
+      }
+      if (operator === '-') {
+        return subtr(value1, value2);
+      } return multiply(value1, value2);
+    };
+    const expectedAnswer = check(simbol);
     const userAnswer = readlineSync.question('Your answer: ');
     if (Number(userAnswer) !== expectedAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${expectedAnswer}.`);
