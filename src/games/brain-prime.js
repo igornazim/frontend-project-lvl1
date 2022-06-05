@@ -23,7 +23,7 @@ const primeGame = () => {
   for (let i = 0; i < rounds; i += 1) {
     const random = new Random();
     const value = random.integer(1, 100);
-    console.log(`${value}`);
+    console.log(`Question: ${value}`);
     const expectedAnswer = isPrime(value) ? 'yes' : 'no';
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== expectedAnswer) {

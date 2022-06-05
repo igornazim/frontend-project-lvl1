@@ -17,7 +17,7 @@ const calcGame = () => {
     const value1 = random.integer(1, 100);
     const value2 = random.integer(1, 100);
     const simbol = random.pick(simbols);
-    console.log(`${value1}${simbol}${value2}`);
+    console.log(`Question: ${value1}${simbol}${value2}`);
     const check = (operator) => {
       if (operator === '+') {
         return summ(value1, value2);

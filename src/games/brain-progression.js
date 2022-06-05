@@ -28,7 +28,7 @@ const progressionGame = () => {
     };
     const resultProgression = progressionMaker(progressionStart);
     const expectedAnswer = String(replaceNumber);
-    console.log(resultProgression);
+    console.log(`Question: ${resultProgression}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== expectedAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${expectedAnswer}.`);

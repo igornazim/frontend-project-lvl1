@@ -19,7 +19,7 @@ const gcdGame = () => {
     const random = new Random();
     const value1 = random.integer(1, 100);
     const value2 = random.integer(1, 100);
-    console.log(`${value1} ${value2}`);
+    console.log(`Question: ${value1} ${value2}`);
     const expectedAnswer = gcd(value1, value2);
     const userAnswer = readlineSync.question('Your answer: ');
     if (Number(userAnswer) !== expectedAnswer) {
