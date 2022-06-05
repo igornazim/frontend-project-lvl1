@@ -29,7 +29,7 @@ const gcdGame = () => {
     }
     console.log('Correct!');
   }
-  console.log(`Congratulations, ${userName}`);
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default gcdGame;

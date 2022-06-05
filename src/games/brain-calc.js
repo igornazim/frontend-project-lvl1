@@ -35,7 +35,7 @@ const calcGame = () => {
     }
     console.log('Correct!');
   }
-  console.log(`Congratulations, ${userName}`);
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default calcGame;
