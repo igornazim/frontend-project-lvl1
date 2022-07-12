@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/igornazim/frontend-project-lvl1#readme",
   "dependencies": {
-    "random-js": "^2.1.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {

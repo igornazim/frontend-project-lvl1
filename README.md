@@ -1,11 +1,8 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/igornazim/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/igornazim/frontend-project-lvl1/actions)
 
-<a 
-href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img 
-src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" 
-/></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/c157be82097a2b3caa2d/maintainability)](https://codeclimate.com/github/igornazim/frontend-project-lvl1/maintainability)
 
 [![Node CI](https://github.com/igornazim/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)](https://github.com/igornazim/frontend-project-lvl1/actions/workflows/nodejs.yml)
 
-https://asciinema.org/a/lsjz3K73KgZvIH6CVlTPYVCQf
+

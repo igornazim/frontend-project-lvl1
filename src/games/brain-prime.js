@@ -1,6 +1,4 @@
-import readlineSync from 'readline-sync';
-import { Random } from 'random-js';
-import engine from '../index.js';
+import { engine, getRandomIntInclusive } from '../index.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (number) => {
@@ -15,14 +13,11 @@ const isPrime = (number) => {
   return true;
 };
 
-const primeInnerFoo = () => {
-  const random = new Random();
-  const value = random.integer(1, 100);
-  console.log(`Question: ${value}`);
+const primeGame = () => {
+  const value = getRandomIntInclusive(1, 100);
   const expectedAnswer = isPrime(value) ? 'yes' : 'no';
-  const userAnswer = readlineSync.question('Your answer: ');
-  return [expectedAnswer, userAnswer];
+  return [expectedAnswer, value];
 };
 
-const primeGame = () => engine(rules, primeInnerFoo);
-export default primeGame;
+const brainPrime = () => engine(rules, primeGame);
+export default brainPrime;
