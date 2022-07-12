@@ -1,4 +1,5 @@
-import { engine, getRandomIntInclusive } from '../index.js';
+import engine from '../index.js';
+import getRandomIntInclusive from '../utils.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (number) => {
@@ -13,11 +14,11 @@ const isPrime = (number) => {
   return true;
 };
 
-const primeGame = () => {
-  const value = getRandomIntInclusive(1, 100);
-  const expectedAnswer = isPrime(value) ? 'yes' : 'no';
-  return [expectedAnswer, value];
+const primeGameRound = () => {
+  const question = getRandomIntInclusive(1, 100);
+  const expectedAnswer = isPrime(question) ? 'yes' : 'no';
+  return [expectedAnswer, question];
 };
 
-const brainPrime = () => engine(rules, primeGame);
-export default brainPrime;
+const runBrainPrime = () => engine(rules, primeGameRound);
+export default runBrainPrime;

@@ -1,4 +1,5 @@
-import { engine, getRandomIntInclusive } from '../index.js';
+import engine from '../index.js';
+import getRandomIntInclusive from '../utils.js';
 
 const rules = 'Find the greatest common divisor of given numbers.';
 const gcd = (a, b) => {
@@ -8,13 +9,13 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-const gcdGame = () => {
-  const value1 = getRandomIntInclusive(1, 100);
-  const value2 = getRandomIntInclusive(1, 100);
-  const value = `${value1} ${value2}`;
-  const expectedAnswer = String(gcd(value1, value2));
-  return [expectedAnswer, value];
+const gcdGameRound = () => {
+  const firstNumber = getRandomIntInclusive(1, 100);
+  const secondNumber = getRandomIntInclusive(1, 100);
+  const question = `${firstNumber} ${secondNumber}`;
+  const expectedAnswer = String(gcd(firstNumber, secondNumber));
+  return [expectedAnswer, question];
 };
 
-const brainGcd = () => engine(rules, gcdGame);
-export default brainGcd;
+const runBrainGcd = () => engine(rules, gcdGameRound);
+export default runBrainGcd;

@@ -1,10 +1,5 @@
 import readlineSync from 'readline-sync';
 
-const getRandomIntInclusive = (min, max) => {
-  const minimum = Math.ceil(min);
-  const maximum = Math.floor(max);
-  return Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
-};
 const roundsCount = 3;
 
 const engine = (rules, gameProcess) => {
@@ -13,8 +8,8 @@ const engine = (rules, gameProcess) => {
   console.log(`Hello, ${userName}!`);
   console.log(rules);
   for (let i = 0; i < roundsCount; i += 1) {
-    const [expectedAnswer, value] = gameProcess();
-    console.log(`Question: ${value}`);
+    const [expectedAnswer, question] = gameProcess();
+    console.log(`Question: ${question}`);
     const userAnswer = (readlineSync.question('Your answer: '));
     if (userAnswer !== expectedAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${expectedAnswer}.`);
@@ -25,4 +20,4 @@ const engine = (rules, gameProcess) => {
   }
   console.log(`Congratulations, ${userName}!`);
 };
-export { engine, getRandomIntInclusive };
+export default engine;

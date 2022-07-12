@@ -1,24 +1,26 @@
-import { engine, getRandomIntInclusive } from '../index.js';
+import engine from '../index.js';
+import getRandomIntInclusive from '../utils.js';
 
 const rules = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 const calculation = (operator, firstNumber, secondNumber) => {
-  if (operator === '+') {
-    return firstNumber + secondNumber;
+  switch (operator) {
+    case '+':
+      return firstNumber + secondNumber;
+    case '-':
+      return firstNumber - secondNumber;
+    default: return firstNumber * secondNumber;
   }
-  if (operator === '-') {
-    return firstNumber - secondNumber;
-  } return firstNumber * secondNumber;
 };
 
-const calcGame = () => {
+const calcGameRound = () => {
   const firstNumber = getRandomIntInclusive(1, 100);
   const secondNumber = getRandomIntInclusive(1, 100);
-  const operator = operators[getRandomIntInclusive(0, 2)];
-  const value = `${firstNumber} ${operator} ${secondNumber}`;
+  const operator = operators[getRandomIntInclusive(0, operators.length - 1)];
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
   const expectedAnswer = String(calculation(operator, firstNumber, secondNumber));
-  return [expectedAnswer, value];
+  return [expectedAnswer, question];
 };
 
-const brainCalc = () => engine(rules, calcGame);
-export default brainCalc;
+const runBrainCalc = () => engine(rules, calcGameRound);
+export default runBrainCalc;
