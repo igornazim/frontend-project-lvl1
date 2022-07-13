@@ -14,11 +14,11 @@ const isPrime = (number) => {
   return true;
 };
 
-const primeGameRound = () => {
+const generateRound = () => {
   const question = getRandomIntInclusive(1, 100);
   const expectedAnswer = isPrime(question) ? 'yes' : 'no';
   return [expectedAnswer, question];
 };
 
-const runBrainPrime = () => engine(rules, primeGameRound);
+const runBrainPrime = () => engine(rules, generateRound);
 export default runBrainPrime;

@@ -9,11 +9,14 @@ const calculation = (operator, firstNumber, secondNumber) => {
       return firstNumber + secondNumber;
     case '-':
       return firstNumber - secondNumber;
-    default: return firstNumber * secondNumber;
+    case '*':
+      return firstNumber * secondNumber;
+    default:
+      throw new Error(`Unknown order state: '${operator}'!`);
   }
 };
 
-const calcGameRound = () => {
+const generateRound = () => {
   const firstNumber = getRandomIntInclusive(1, 100);
   const secondNumber = getRandomIntInclusive(1, 100);
   const operator = operators[getRandomIntInclusive(0, operators.length - 1)];
@@ -22,5 +25,5 @@ const calcGameRound = () => {
   return [expectedAnswer, question];
 };
 
-const runBrainCalc = () => engine(rules, calcGameRound);
+const runBrainCalc = () => engine(rules, generateRound);
 export default runBrainCalc;

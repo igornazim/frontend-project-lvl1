@@ -16,7 +16,7 @@ const makeProgression = (startNumber, step, changeIndex) => {
   return question;
 };
 
-const progressionGameRound = () => {
+const generateRound = () => {
   const progressionStart = getRandomIntInclusive(1, 100);
   const progressionStep = getRandomIntInclusive(1, 5);
   const replaceIndex = getRandomIntInclusive(2, 9);
@@ -26,5 +26,5 @@ const progressionGameRound = () => {
   return [expectedAnswer, question];
 };
 
-const runBrainProgression = () => engine(rules, progressionGameRound);
+const runBrainProgression = () => engine(rules, generateRound);
 export default runBrainProgression;

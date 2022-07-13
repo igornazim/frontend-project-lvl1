@@ -9,7 +9,7 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-const gcdGameRound = () => {
+const generateRound = () => {
   const firstNumber = getRandomIntInclusive(1, 100);
   const secondNumber = getRandomIntInclusive(1, 100);
   const question = `${firstNumber} ${secondNumber}`;
@@ -17,5 +17,5 @@ const gcdGameRound = () => {
   return [expectedAnswer, question];
 };
 
-const runBrainGcd = () => engine(rules, gcdGameRound);
+const runBrainGcd = () => engine(rules, generateRound);
 export default runBrainGcd;
