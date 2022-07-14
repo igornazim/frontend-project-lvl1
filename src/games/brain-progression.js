@@ -5,10 +5,8 @@ const gameRule = 'What number is missing in the progression?';
 const makeProgression = (startNumber, step, changeIndex) => {
   const progressionLength = 10;
   let question = '';
-  let progressionStep = startNumber;
   for (let i = 0; i < progressionLength; i += 1) {
-    progressionStep = (i === changeIndex) ? '..' : startNumber + (i * step);
-    question = `${question} ${progressionStep}`;
+    question = (i === changeIndex) ? `${question} ..` : `${question} ${startNumber + (i * step)}`;
   }
   return question;
 };
