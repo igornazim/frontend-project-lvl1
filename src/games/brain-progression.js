@@ -4,15 +4,15 @@ import getRandom from '../utils.js';
 const gameRule = 'What number is missing in the progression?';
 const makeProgression = (startNumber, step, changeIndex) => {
   const progressionLength = 10;
-  let question = '';
+  let progression = '';
   for (let i = 0; i < progressionLength; i += 1) {
-    question = (i === changeIndex) ? `${question} ..` : `${question} ${startNumber + (i * step)}`;
+    progression = (i === changeIndex) ? `${progression} ..` : `${progression} ${startNumber + (i * step)}`;
   }
-  return question;
+  return progression;
 };
 
 const generateRound = () => {
-  const progressionStart = getRandom(1, 100);
+  const progressionStart = getRandom();
   const progressionStep = getRandom(1, 5);
   const replaceIndex = getRandom(2, 9);
   const question = makeProgression(progressionStart, progressionStep, replaceIndex);
