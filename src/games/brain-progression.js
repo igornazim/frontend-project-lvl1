@@ -1,30 +1,26 @@
-import engine from '../index.js';
-import getRandomIntInclusive from '../utils.js';
+import playGame from '../index.js';
+import getRandom from '../utils.js';
 
-const rules = 'What number is missing in the progression?';
+const gameRule = 'What number is missing in the progression?';
 const makeProgression = (startNumber, step, changeIndex) => {
-  const progressionArray = [];
-  progressionArray.push(startNumber);
+  const progressionLength = 10;
+  let question = '';
   let progressionStep = startNumber;
-  for (let j = 0; j < 9; j += 1) {
-    progressionStep += step;
-    progressionArray.push(progressionStep);
+  for (let i = 0; i < progressionLength; i += 1) {
+    progressionStep = (i === changeIndex) ? '..' : startNumber + (i * step);
+    question = `${question} ${progressionStep}`;
   }
-  const replaceNumber = progressionArray[changeIndex];
-  const question = progressionArray.join(' ')
-    .replace(replaceNumber, '..');
   return question;
 };
 
 const generateRound = () => {
-  const progressionStart = getRandomIntInclusive(1, 100);
-  const progressionStep = getRandomIntInclusive(1, 5);
-  const replaceIndex = getRandomIntInclusive(2, 9);
+  const progressionStart = getRandom();
+  const progressionStep = getRandom(2, 5);
+  const replaceIndex = getRandom(1, 9);
   const question = makeProgression(progressionStart, progressionStep, replaceIndex);
-  const replaceNumber = Number(question.split(' ')[replaceIndex - 1]) + progressionStep;
-  const expectedAnswer = String(replaceNumber);
+  const expectedAnswer = String(progressionStart + (progressionStep * replaceIndex));
   return [expectedAnswer, question];
 };
 
-const runBrainProgression = () => engine(rules, generateRound);
+const runBrainProgression = () => playGame(gameRule, generateRound);
 export default runBrainProgression;

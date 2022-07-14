@@ -1,7 +1,7 @@
-import engine from '../index.js';
-import getRandomIntInclusive from '../utils.js';
+import playGame from '../index.js';
+import getRandom from '../utils.js';
 
-const rules = 'Find the greatest common divisor of given numbers.';
+const gameRule = 'Find the greatest common divisor of given numbers.';
 const gcd = (a, b) => {
   if (b === 0) {
     return a;
@@ -10,12 +10,12 @@ const gcd = (a, b) => {
 };
 
 const generateRound = () => {
-  const firstNumber = getRandomIntInclusive(1, 100);
-  const secondNumber = getRandomIntInclusive(1, 100);
+  const firstNumber = getRandom();
+  const secondNumber = getRandom();
   const question = `${firstNumber} ${secondNumber}`;
   const expectedAnswer = String(gcd(firstNumber, secondNumber));
   return [expectedAnswer, question];
 };
 
-const runBrainGcd = () => engine(rules, generateRound);
+const runBrainGcd = () => playGame(gameRule, generateRound);
 export default runBrainGcd;

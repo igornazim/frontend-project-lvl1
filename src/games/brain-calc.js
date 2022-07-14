@@ -1,9 +1,9 @@
-import engine from '../index.js';
-import getRandomIntInclusive from '../utils.js';
+import playGame from '../index.js';
+import getRandom from '../utils.js';
 
-const rules = 'What is the result of the expression?';
+const gameRule = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
-const calculation = (operator, firstNumber, secondNumber) => {
+const calculate = (operator, firstNumber, secondNumber) => {
   switch (operator) {
     case '+':
       return firstNumber + secondNumber;
@@ -17,13 +17,13 @@ const calculation = (operator, firstNumber, secondNumber) => {
 };
 
 const generateRound = () => {
-  const firstNumber = getRandomIntInclusive(1, 100);
-  const secondNumber = getRandomIntInclusive(1, 100);
-  const operator = operators[getRandomIntInclusive(0, operators.length - 1)];
+  const firstNumber = getRandom();
+  const secondNumber = getRandom();
+  const operator = operators[getRandom(0, operators.length - 1)];
   const question = `${firstNumber} ${operator} ${secondNumber}`;
-  const expectedAnswer = String(calculation(operator, firstNumber, secondNumber));
+  const expectedAnswer = String(calculate(operator, firstNumber, secondNumber));
   return [expectedAnswer, question];
 };
 
-const runBrainCalc = () => engine(rules, generateRound);
+const runBrainCalc = () => playGame(gameRule, generateRound);
 export default runBrainCalc;
