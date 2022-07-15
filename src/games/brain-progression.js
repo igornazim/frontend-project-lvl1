@@ -3,7 +3,7 @@ import getRandom from '../utils.js';
 
 const gameRule = 'What number is missing in the progression?';
 const makeProgression = (startNumber, step, changeIndex) => {
-  const progressionLength = getRandom(5, 10);
+  const progressionLength = 10;
   let progression = '';
   for (let i = 0; i < progressionLength; i += 1) {
     progression = (i === changeIndex) ? `${progression} ..` : `${progression} ${startNumber + (i * step)}`;
