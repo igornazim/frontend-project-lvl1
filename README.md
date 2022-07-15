@@ -24,7 +24,7 @@ The game is launched by entering the name of the game in terminal.
 
 ### Play demo
 **Calculator**
-[![asciicast](https://asciinema.org/a/wCAzG7Ntgh8KfKJUCQjlos2R2.png)](https://asciinema.org/a/wCAzG7Ntgh8KfKJUCQjlos2R2?autoplay=1)
+[![asciicast](https://asciinema.org/a/wCAzG7Ntgh8KfKJUCQjlos2R2.png)](https://asciinema.org/a/wCAzG7Ntgh8KfKJUCQjlos2R2)
 
 **Progression**
 [![asciicast](https://asciinema.org/a/jWeBBqkdwvb1oODxh1ejV5v6J.png)](https://asciinema.org/a/jWeBBqkdwvb1oODxh1ejV5v6J)
