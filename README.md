@@ -19,11 +19,26 @@ The game is launched by entering the name of the game in terminal.
 - Calculator: brain-calc
 - Progression: brain-progression
 - Definition of an even number: brain-even
-- Finding the Greatest Common Divisor: brain-gcd
+- Finding the greatest common divisor: brain-gcd
 - Definition of a prime number: brain-prime
 
 ### Play demo
-[![asciicast](https://asciinema.org/a/zvOcJiKV3Ky9g9ZzKMC2lnbcl.png)](https://asciinema.org/a/zvOcJiKV3Ky9g9ZzKMC2lnbcl)
+**Calculator**
+[![asciicast](https://asciinema.org/a/wCAzG7Ntgh8KfKJUCQjlos2R2.png)](https://asciinema.org/a/wCAzG7Ntgh8KfKJUCQjlos2R2)
+
+**Progression**
+[![asciicast](https://asciinema.org/a/jWeBBqkdwvb1oODxh1ejV5v6J.png)](https://asciinema.org/a/jWeBBqkdwvb1oODxh1ejV5v6J)
+
+**Definition of an even number**
+[![asciicast](https://asciinema.org/a/wb5xaUjboNDfkU1c6BiOZLA7G.png)](https://asciinema.org/a/wb5xaUjboNDfkU1c6BiOZLA7G)
+
+**Finding the greatest common divisor**
+[![asciicast](https://asciinema.org/a/S2nrYR4XuDPxllapfz9T1DhLK.png)](https://asciinema.org/a/S2nrYR4XuDPxllapfz9T1DhLK)
+
+**Definition of a prime number**
+[![asciicast](https://asciinema.org/a/Pg5b9XaRZYMzTTNnDHluTlKTu.png)](https://asciinema.org/a/Pg5b9XaRZYMzTTNnDHluTlKTu)
+
+
 
 
 
